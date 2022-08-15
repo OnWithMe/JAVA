@@ -1,0 +1,41 @@
+//ROCK PAPER SCISSORS GAME
+import java.util.Scanner;
+import java.util.Random;
+public class rockpaperscissors {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Random rand = new Random();
+		System.out.println("Match Begins !!\n");
+		System.out.println("0 ->Rock\n1 ->PaPer\n2 ->Scissors\n");
+		int a = sc.nextInt();
+		int b = rand.nextInt(3);	
+		System.out.println(b);
+		switch(b) {
+		case 0: 
+			switch(a) {
+			case 0:System.out.println("It's a Tie !!"); break;
+			case 1:System.out.println("You Win !!");break;
+			case 2:System.out.println("Computer Wins !!"); break;
+			default: System.out.println("Please enter a valid number !!!!");
+			} 
+			break;
+		case 1:
+			switch(a) {
+			case 0:System.out.println("Computer Wins !!");break;
+			case 1:System.out.println("It's a Tie !!"); break;
+			case 2:System.out.println("You Win !!");  break;
+			default: System.out.println("Please enter a valid number !!!!");
+			}
+			break;
+		case 2:
+			switch(a) {
+			case 0:System.out.println("You Win !!"); break;
+			case 1:System.out.println("Computer Wins !!"); break;
+			case 2:System.out.println("It's a Tie !!"); break;
+			default: System.out.println("Please enter a valid number !!!!");
+			}
+		}		
+	  sc.close();
+	}
+}
